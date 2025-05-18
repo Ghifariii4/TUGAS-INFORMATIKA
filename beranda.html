@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Super Hello</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+  <style>
+    .wave-top {
+      clip-path: polygon(
+        0 15%, 10% 10%, 20% 20%, 30% 10%, 40% 20%, 50% 10%, 
+        60% 20%, 70% 10%, 80% 20%, 90% 10%, 100% 20%, 
+        100% 100%, 0 100%
+      );
+    }
+  </style>
+</head>
+
+<body class="bg-black text-white font-sans">
+
+  <!-- Navbar -->
+  <nav class="flex justify-between items-center px-4 sm:px-6 md:px-10 py-3 text-xs sm:text-sm md:text-base">
+    <div class="font-normal">Super Hello</div>
+    <ul class="hidden md:flex space-x-6 font-normal">
+      <li><a href="#" class="hover:underline">Benefits</a></li>
+      <li><a href="#" class="hover:underline">Recent work</a></li>
+      <li><a href="#" class="hover:underline">How it works</a></li>
+      <li><a href="#" class="hover:underline">Pricing</a></li>
+      <li><a href="#" class="hover:underline">FAQs</a></li>
+      <li><a href="#" class="hover:underline">Contact</a></li>
+    </ul>
+    <button class="hidden md:block bg-white text-black text-xs sm:text-sm font-semibold rounded-full px-4 py-1">
+      Log in
+    </button>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="flex flex-col md:flex-row items-center justify-between bg-[#e68de0] px-6 sm:px-10 md:px-20 py-16 md:py-24">
+    <div class="max-w-xl text-white">
+      <h1 class="font-extrabold text-[5.5rem] leading-[4.5rem] sm:text-[7rem] sm:leading-[6rem]">
+        <span class="block text-[2.25rem] sm:text-[3rem] font-extrabold">super</span>
+        hello
+      </h1>
+      <h2 class="font-extrabold text-lg sm:text-xl mt-1 text-black">A design agency....kinda</h2>
+      <p class="text-black text-sm sm:text-base mt-2">
+        Unlimited revisions and a flat monthy fee.
+      </p>
+      <button class="mt-6 bg-[#ff7f00] text-black font-bold text-xs sm:text-sm rounded-md px-5 py-2 hover:bg-[#e67300] transition-colors">
+        See Plans
+      </button>
+    </div>
+    <div class="mt-10 md:mt-0 md:ml-10 flex-shrink-0">
+      <img src="https://storage.googleapis.com/a1aa/image/77744216-4d6b-4101-6f90-c9dab8890695.jpg"
+           alt="Illustration of a yellow robot with blue and pink details and three small people standing around it"
+           class="w-[300px] h-[400px] object-contain" width="300" height="400" />
+    </div>
+  </section>
+
+  <!-- Wave Divider -->
+  <div class="wave-top bg-[#f0c33c] -mt-2"></div>
+
+  <!-- Second Section -->
+  <section class="bg-[#f0c33c] px-6 sm:px-10 md:px-20 py-16 md:py-24">
+    <div class="flex flex-col md:flex-row items-center md:items-start justify-between max-w-7xl mx-auto">
+      <div class="flex-shrink-0">
+        <img src="https://storage.googleapis.com/a1aa/image/fcc59b1c-9d7a-4f17-f9df-60b9ca9827e4.jpg"
+             alt="Illustration of an orange robot with various details and four small people standing around it"
+             class="w-[350px] h-[300px] object-contain" width="350" height="300" />
+      </div>
+      <div class="mt-8 md:mt-0 md:ml-10 max-w-lg text-black">
+        <h3 class="font-extrabold text-xl sm:text-2xl leading-tight">
+          The future of<br />design services
+        </h3>
+        <p class="mt-3 text-xs sm:text-sm leading-relaxed">
+          Need stunning graphic design, intuitive UI/UX, or eye-catching web design? 
+          Welcome home. We're Super Hello, your design partner for a flat monthly fee. 
+          We're all about delivering good creative in a new way.
+        </p>
+      </div>
+    </div>
+
+    <!-- How it Works -->
+    <h3 class="font-extrabold text-center text-lg sm:text-xl mt-20 mb-8 text-black">How it works</h3>
+
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-5xl mx-auto text-black">
+
+      <!-- Subscribe -->
+      <div class="bg-white rounded-lg border border-black p-4 shadow-md flex flex-col">
+        <div class="bg-[#e68de0] rounded-md p-6 mb-4 flex justify-center items-center">
+          <img src="https://storage.googleapis.com/a1aa/image/517d4a21-b619-4ac1-2f23-2cb216c2af6b.jpg"
+               alt="Icon of a white lightning bolt with yellow fill on a pink background"
+               class="w-12 h-12" width="60" height="60" />
+        </div>
+        <h4 class="font-extrabold text-lg mb-2">Subscribe</h4>
+        <p class="text-xs leading-relaxed">
+          Kickstart your design adventure by hopping on our monthly subscription. 
+          For just $2k, you get unlimited dibs on top-notch design work.
+        </p>
+      </div>
+
+      <!-- Request -->
+      <div class="bg-white rounded-lg border border-black p-4 shadow-md flex flex-col">
+        <div class="bg-[#e68de0] rounded-md p-6 mb-4 flex justify-center items-center">
+          <img src="https://storage.googleapis.com/a1aa/image/f5d28252-983f-485d-a095-ffb5b8a8d9b5.jpg"
+               alt="Icon of a white paper plane on a pink background"
+               class="w-12 h-12" width="60" height="60" />
+        </div>
+        <h4 class="font-extrabold text-lg mb-2">Request</h4>
+        <p class="text-xs leading-relaxed">
+          Alright, you're in! Now, it's time to toss your design tasks our way. 
+          Need a branding concept? A sleek landing page design? Or maybe a standout trifold brochure? 
+          No sweat. Just keep those requests coming!
+        </p>
+      </div>
+
+      <!-- Review -->
+      <div class="bg-white rounded-lg border border-black p-4 shadow-md flex flex-col">
+        <div class="bg-[#e68de0] rounded-md p-6 mb-4 flex justify-center items-center">
+          <img src="https://storage.googleapis.com/a1aa/image/ce57dcdb-a49f-4989-a0f5-1d3b27f8e99c.jpg"
+               alt="Icon of a stylized eye on a pink background"
+               class="w-12 h-12" width="60" height="60" />
+        </div>
+        <h4 class="font-extrabold text-lg mb-2">Review</h4>
+        <p class="text-xs leading-relaxed">
+          Hold tight! In just 48 hours, you'll get your first peek at your completed design. 
+          And if it's not love at first sight, no worries! We can tweak and tune it until it's just right — 
+          that's the beauty of unlimited revisions.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+</body>
+</html>

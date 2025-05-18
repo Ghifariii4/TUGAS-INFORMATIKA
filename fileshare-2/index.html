@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Konfigurasi File Sharing</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Konfigurasi File Sharing</h1>
+    <p>Windows ke Windows & Windows ke Linux (Samba)</p>
+  </header>
+
+  <main>
+    <!-- BAGIAN WINDOWS KE WINDOWS -->
+    <section class="card">
+      <h2>Windows ke Windows</h2>
+      <ol>
+        <li>Buka drive <code>C:</code> atau <code>D:</code> dan buat nama folder yang diinginkan.</li>
+        <li>Klik kanan > <strong>Properties</strong> > buka tab <strong>Sharing</strong> > klik <strong>Advanced Sharing</strong>.</li>
+        <li>Centang <strong>“Share this folder”</strong>, lalu klik <strong>Permissions</strong>.</li>
+        <li>Centang semua <strong>Allow</strong> (Full Control, Change, Read), lalu klik Apply.</li>
+        <li>Matikan <strong>Password Protected Sharing</strong> di: Control Panel > Network and Sharing > All Networks.</li>
+        <li>Buka CMD dan ketik <code>ipconfig</code> untuk mengecek IP address Windows.</li>
+        <li>Dari PC lain, buka File Explorer dan akses IP: <code>\\192.168.xx.xx</code>.</li>
+      </ol>
+    </section>
+
+    <!-- BAGIAN WINDOWS KE LINUX -->
+    <section class="card">
+      <h2>Windows ke Linux (Samba)</h2>
+      <ol>
+        <li>Buka terminal Linux dan login sebagai root: <code>su -</code></li>
+        <li>Edit IP statis di <code>/etc/network/interfaces</code>.</li>
+        <li>Install Samba dengan perintah: <code>apt-get install samba</code>.</li>
+        <li>Edit konfigurasi Samba:
+          <code>/etc/samba/smb.conf</code> dan tambahkan:
+          <pre>
+[SAMBA_SERVER]
+path = /home/user/sambashare
+valid users = samba1
+writable = yes
+browseable = yes
+guest ok = no
+          </pre>
+        </li>
+        <li>Buat user: <code>adduser samba1</code> lalu <code>smbpasswd -a samba1</code></li>
+        <li>Restart Samba dengan perintah: <code>systemctl restart smbd</code></li>
+        <li>Dari Windows, akses Linux dengan mengetik <code>\\192.168.xx.xx</code> di File Explorer, lalu login dengan user Samba.</li>
+      </ol>
+    </section>
+  </main>
+
+</body>
+</html>
